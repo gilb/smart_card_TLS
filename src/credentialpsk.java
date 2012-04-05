@@ -49,7 +49,8 @@
  */
 
 
-package openeapsmartcard ;
+package applet ;
+
 import javacard.security.* ;
 
 public class credentialpsk {

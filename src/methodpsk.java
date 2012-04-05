@@ -49,8 +49,7 @@
  */
 
 
-package openeapsmartcard   ;
-  
+package applet   ;
 
 import javacard.framework.* ;
 import javacard.security.*  ;

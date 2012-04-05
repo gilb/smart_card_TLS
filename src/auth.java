@@ -49,10 +49,10 @@
  */
 
 
-package openeapsmartcard  ;
+package applet;
 
-import javacard.framework.* ;
-import javacard.security.*  ;
+import javacard.framework.*;
+import javacard.security.*;
 
 /**
  *  Interface for EAP methods
@@ -75,7 +75,7 @@ public interface auth {
 	 * <br>-length of the response
 	 * <br>-negative value if an error occured
 	 */
-	public short   process_eap (byte[] in,short len) throws CryptoException ;
+	public short   process_eap (byte[] in,short len) throws CryptoException;
     /**
      * Indicates that the response of the method is stored in a private buffer
      */	
@@ -124,5 +124,5 @@ public interface auth {
 	 */
 	public short status();
 		
-	}
+}
     

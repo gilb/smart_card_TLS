@@ -47,33 +47,46 @@
  * copied and put under another distribution licence
  * [including the GNU Public Licence.]
  */
+ 
+ 
+/****************************************************************************************************************************
+ | UPDATE 2011 - Gilles Bernabé                                                                                             |
+ |--------------------------------------------------------------------------------------------------------------------------|
+ | - remove cypher suite TLS_RSA_WITH_RC4_128_SHA and implementation of TLS_RSA_WITH_AES_128_CBC_SHA                        |
+ | - implementation of the entire TLS Record and possibility to transmit the password from smart card to server through TLS |
+ | - update RSA 1024 to RSA 2048 for client signature and encryption with server public key                                 |
+ | - minor changes: memory management, harden certificate checking, cleanups...                                             |
+ ****************************************************************************************************************************/
 
-package openeapsmartcard  ;
+ 
+package applet;
 
-import javacard.security.* ;
-import javacardx.crypto.*  ;
-
+import javacard.security.*;
+import javacardx.crypto.*;
 
 public class credentialtls {
 	
-	public MessageDigest       md5=null ;
-    public MessageDigest       sha=null ;
+	public MessageDigest       md5=null;
+    public MessageDigest       sha=null;
     public RSAPrivateCrtKey    rsa_PrivateCrtKey=null;
     public RSAPublicKey        rsa_PublicKey=null;
+	public RSAPublicKey        rsa_PublicKey_1024=null;
+	public RSAPublicKey        rsa_PublicKey_2048=null;
 	public RSAPublicKey        rsa_PublicKeyCA=null;
-    public RSAPublicKey        rsa_PublicKeyDecrypt=null;
     public Cipher              cipherRSA=null;
     public RandomData          rnd=null ;
 	
-	public boolean test  ;
-	public boolean step  ;
+	public boolean test;
+	public boolean step;
 	public boolean enable_resume;
 	
-	public byte [] Cert ;
+	public byte [] Cert;
 	public short Cert_Offset, Cert_Length;
 	
-	public  byte  [] PMK_Key                      ;
-    public  short  PMK_Key_Offset, PMK_Key_Length ;
+	// public  byte  [] PMK_Key;
+    // public  short  PMK_Key_Offset, PMK_Key_Length;
+	// public byte [] mastersecret;
+	// public byte [] Certserver ;
 	
 }
     
