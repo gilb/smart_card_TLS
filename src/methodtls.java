@@ -49,14 +49,15 @@
  */
  
  
-/****************************************************************************************************************************
- | UPDATE 2011 - Gilles Bernabé                                                                                             |
- |--------------------------------------------------------------------------------------------------------------------------|
- | - remove cypher suite TLS_RSA_WITH_RC4_128_SHA and implementation of TLS_RSA_WITH_AES_128_CBC_SHA                        |
- | - implementation of the entire TLS Record and possibility to transmit the password from smart card to server through TLS |
- | - update RSA 1024 to RSA 2048 for client signature and encryption with server public key                                 |
- | - minor changes: memory management, harden certificate checking, cleanups...                                             |
- ****************************************************************************************************************************/
+/****************************************************************************************************************
+ | UPDATE 2011 - Gilles Bernabé                                                                                 |
+ |--------------------------------------------------------------------------------------------------------- ----|
+ | - remove cypher suite TLS_RSA_WITH_RC4_128_SHA and implementation of TLS_RSA_WITH_AES_128_CBC_SHA            |
+ | - implementation of the entire TLS Record protocol								|           
+ | - possibility to transmit the password from smart card to server through TLS for authentication on a service |
+ | - update RSA 1024 to RSA 2048 for client signature and encryption with server public key                     |
+ | - minor changes: memory management, harden certificate checking, cleanups...                                 |
+ ****************************************************************************************************************/
  
  
 package applet;
