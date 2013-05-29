@@ -14,4 +14,4 @@ The first commit corresponds to the initial code of Pascal Urien, not updated si
 It has been tested with success for authentication on Gmail mobile (lightweight version) with the card G&D SmartCafe 3.2, performances for authentication plus check of emails are about 14 seconds, and few seconds more to check a particular email of average size.
 It is designed to be used with the Java bridge of the "OpenEAP smartcard" project: http://www.infres.enst.fr/~urien/openeapsmartcard/SmartHook.html.
 In order to load the CA certificate in the card, see: https://github.com/gilb/smart_card_TLS/wiki/.
-(To be noted that the card application doesn't have any protections against side channels attacks for the moment ;)
+(To be noted that the card application doesn't implement any protections against physical attacks for the moment ;)
